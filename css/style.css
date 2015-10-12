@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", "Roboto", sans-serif;
 }
 
 .clear-fix {
@@ -195,6 +195,10 @@ span {
 }
 
 #map {
+  /** Adds Box-Shadow to Map**/
+  -webkit-box-shadow: -1px 2px 18px 3px rgba(0,0,0,0.36);
+  -moz-box-shadow: -1px 2px 18px 3px rgba(0,0,0,0.36);
+  box-shadow: -1px 2px 18px 3px rgba(0,0,0,0.36);
   display: block;
   height: 100%;
   margin: 0 5%;
