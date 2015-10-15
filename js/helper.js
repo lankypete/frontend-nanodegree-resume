@@ -23,6 +23,10 @@ var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
+var HTMLfooterMobile = '<li>Call Me: %data%</li>';
+var HTMLfooterEmail = '<li>Email Me:&nbsp;<a href="mailto:%data%?Subject=Hello%20Deano" target="_top" style="margin: 0">  \
+                      %data%</a> </li>';
+
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
