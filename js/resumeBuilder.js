@@ -1,15 +1,7 @@
 //who am I?
-
-var name = "Dean Glueckler";
-
-var role = "Front-End Developer";
-
-var skills = ["Long Arms", "Long Legs", "Lots of Sheep", "“Wolf Sheep”"];
-
-
 var bio = {
-    "name": name,
-    "role": role,
+    "name": "Dean Glueckler",
+    "role": "Front-End Developer",
     "contacts": {
         "mobile": "437 655 7474",
         "email": "queensalive@gmail.com",
@@ -18,7 +10,7 @@ var bio = {
         "location": "1111 Empress Ave Victoria BC"
     },
     "welcomeMessage": "Hi I love you",
-    "skills": skills,
+    "skills": ["Long Arms", "Long Legs", "Lots of Sheep", "“Wolf Sheep”"],
     "contactInfo": "587-437-6509",
     "picURL": "http://img2.wikia.nocookie.net/__"+
     "cb20121128194900/johnnybravo/images/9/9a/Johnny_bravo_004.gif",
@@ -108,7 +100,7 @@ var work = {
     "jobs": [{
         "employer": "Straight Up Cycles",
         "title": "Bicycle Retailer",
-        "city": "Victoria",
+        "location": "Victoria",
         "length": "7 mo - April to Nov 2015",
         "Description": "Finding the perfect bike for customers \
 					<br>Sweeping floors \
@@ -116,7 +108,7 @@ var work = {
     }, {
         "employer": "University of Calgary",
         "title": "Lab Tech",
-        "city": "Calgary",
+        "location": "Calgary",
         "length": "4 mo - May to Sept 2013",
         "Description": "Building Sterling Engines \
 					<br>Writing reports \
@@ -132,7 +124,7 @@ var work = {
 
             var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].length);
 
-            var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].city);
+            var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 
             var formattedDescrip = HTMLworkDescription.replace("%data%", work.jobs[job].Description);
 
@@ -161,13 +153,13 @@ var projects = {
     }],
     "display": function displayProjects() {
 
-        for (var proj in projects.Udacity) {
+        for (var i=0; i < projects.Udacity.length; i++) {
             $("#projects").append(HTMLprojectStart);
-            var formattedName = HTMLprojectTitle.replace("%data%", projects.Udacity[proj].projectname);
-            var formattedDate = HTMLprojectDates.replace("%data%", projects.Udacity[proj].projdates);
-            var formattedDesc = HTMLprojectDescription.replace("%data%", projects.Udacity[proj].description);
-            if (projects.Udacity[proj].image > 0) {
-                var formattedPic = HTMLprojectImage.replace("%data%", projects.Udacity[proj].image);
+            var formattedName = HTMLprojectTitle.replace("%data%", projects.Udacity[i].projectname);
+            var formattedDate = HTMLprojectDates.replace("%data%", projects.Udacity[i].projdates);
+            var formattedDesc = HTMLprojectDescription.replace("%data%", projects.Udacity[i].description);
+            if (projects.Udacity[i].image > 0) {
+                var formattedPic = HTMLprojectImage.replace("%data%", projects.Udacity[i].image);
             } else {
                 var formattedPic = "";
             }
